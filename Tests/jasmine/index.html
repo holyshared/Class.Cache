@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="css/jasmine.css">
+  <script type="text/javascript" src="js/jasmine.js"></script>
+  <script type="text/javascript" src="js/jasmine-html.js"></script>
+  <script type="text/javascript" src="js/mootools-core-1.4.2.js"></script>
+
+
+
+  <script type="text/javascript" src="../../Source/CacheManager.js"></script>
+  <script type="text/javascript" src="spec/cache-content-spec.js"></script>
+  <script type="text/javascript" src="spec/cache-hash-storage-spec.js"></script>
+  <script type="text/javascript" src="spec/cache-session-storage-spec.js"></script>
+  <script type="text/javascript" src="spec/cache-local-storage-spec.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+	jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>
