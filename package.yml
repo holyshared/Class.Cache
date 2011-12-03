@@ -1,0 +1,26 @@
+name: Class.Cache
+
+web: "[http://holyshared.github.com/Class.Cache](http://holyshared.github.com/Class.Cache)"
+
+description: 
+
+authors: "[Noritaka Horio](http://sharedhat.com)"
+
+license: "[MIT License](http://sharedhat.com/mit-license.txt)"
+
+copyright: "&copy; [Noritaka Horio](http://sharedhat.com)"
+
+sources:
+  - Source/Class.Cache.js
+
+author: holyshared
+
+category: Utilities
+
+tags: [class, cache, storage, localStorage, sessionStorage]
+
+current: 1.0
+
+#docs: http://url_to_plugin_docs
+
+demo: http://holyshared.github.com/Class.Cache/
