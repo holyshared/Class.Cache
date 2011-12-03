@@ -2,7 +2,7 @@ name: Class.Cache
 
 web: "[http://holyshared.github.com/Class.Cache](http://holyshared.github.com/Class.Cache)"
 
-description: 
+description: The mixin library which includes a cache function in a class
 
 authors: "[Noritaka Horio](http://sharedhat.com)"
 
