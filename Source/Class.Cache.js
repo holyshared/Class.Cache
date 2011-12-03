@@ -2,7 +2,7 @@
 ---
 name: Class.Cache
 
-description: 
+description: A cash function is included in a class.
 
 license: MIT-style
 
@@ -28,21 +28,21 @@ Class.Mutators.Cache = function(cacheStorage){
 		case 'array':
 			cacheStorage.each(function(value, key){
 				name = value.capitalize() + 'Storage';
-				if (Cache[name]) {
-					storage = Cache[value];
+				if (CacheManager[name]) {
+					storage = name;
 					return false;
 				}
 			});
-			storage = storage || LegacyStorage;
+			storage = storage || 'hash';
 			break;
 		case 'string':
 			name = cacheStorage.capitalize() + 'Storage';
-			storage = Cache[name] || LegacyStorage;
+			storage = (CacheManager[name]) ? cacheStorage : 'hash';
 			break;
 		default:
-			storage = LegacyStorage;
+			storage = 'hash';
 	}
-	this.prototype.cache = new Cache.CacheManager(storage);
+	this.prototype.cache = new CacheManager(storage);
 
 };
 
