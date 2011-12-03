@@ -1,0 +1,3 @@
+[submodule "CacheManager"]
+	path = CacheManager
+	url = git://github.com/holyshared/CacheManager.git
