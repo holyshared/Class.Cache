@@ -10,6 +10,7 @@ authors:
 - Noritaka Horio
 
 requires:
+  - Core/Class
   - CacheManager/CacheManager
 
 provides:
@@ -19,21 +20,22 @@ provides:
 
 (function(global){
 
-Class.Mutators.Cache = function(cacheStorage){
+Class.Mutators.Caches = function(cacheStorage){
 
 	var name = null,
-		storage = null;
+		item = null,
+		storage = null,
+		storages = [];
 
 	switch(typeOf(cacheStorage)) {
 		case 'array':
 			cacheStorage.each(function(value, key){
 				name = value.capitalize() + 'Storage';
-				if (CacheManager[name]) {
-					storage = name;
-					return false;
-				}
+				item = (CacheManager[name]) ? value : null;
+				storages.push(item);
 			});
-			storage = storage || 'hash';
+			storage = storages.pick() || 'hash';
+
 			break;
 		case 'string':
 			name = cacheStorage.capitalize() + 'Storage';
@@ -42,6 +44,7 @@ Class.Mutators.Cache = function(cacheStorage){
 		default:
 			storage = 'hash';
 	}
+
 	this.prototype.cache = new CacheManager(storage);
 
 };
